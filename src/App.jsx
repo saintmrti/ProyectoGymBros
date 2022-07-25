@@ -1,14 +1,14 @@
-import NavBar from './components/navbar/NavBar'
+import Navbar from './components/navbar/Navbar'
 
 
 function App() {
 
   return (
-    <div className="App">
+    <>
       <header className="App-header">
-        <NavBar/>
+        <Navbar/>
       </header>
-    </div>
+    </>
   )
 }
 
