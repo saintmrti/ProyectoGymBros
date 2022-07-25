@@ -10,24 +10,24 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='navbar py-6 relative'>
+      <nav className='navbar py-5 relative'>
         <div className='container mx-auto flex items-center px-8 xl:px-0 font-bold'>
           <h1 className='flex flex-grow'><a href="">GymBros</a></h1>
           <div className='flex lg:hidden'>
             <button onClick={openMenu}><i className='bi bi-list' style={{fontSize: 25}}></i></button>
           </div>
-          <div id='menu' className='lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20'>
-            <ul className='flex'>
-              <li className='mr-7'>
+          <div id='menu' className='lg:flex hidden flex-grow justify-between items-center absolute lg:relative lg:top-0 top-20 w-full lg:w-auto left-0 p-7 lg:p-0'>
+            <ul className='flex flex-col lg:flex-row'>
+              <li className='mr-7 mb-7 lg:mb-0'>
                 <a href="">Rutinas</a>
               </li>
-              <li className='mr-7'>
+              <li className='mr-7 mb-7 lg:mb-0'>
                 <a href="">Recetas</a>
               </li>
-              <li>
+              <li className='mb-7 lg:mb-0'>
                 <a href="">Nosotros</a>
               </li>
-              <li className='visible lg:invisible ml-7'>
+              <li className='visible lg:invisible'>
                 <a href="">Guardados</a>
               </li>
             </ul>
