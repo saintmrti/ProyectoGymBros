@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.navbar {
+#navbar {
     background-color: #FCB823;
+}
+
+#cardInfo{
+    
 }

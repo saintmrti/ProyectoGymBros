@@ -1,4 +1,5 @@
-import Navbar from './components/navbar/Navbar'
+import ItemInfoContainer from './components/navbar/ItemInfoContainer'
+import NavBar from './components/navbar/NavBar'
 
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
   return (
     <>
       <header className="App-header">
-        <Navbar/>
+        <NavBar/>
+        <ItemInfoContainer/>
       </header>
     </>
   )

@@ -1,6 +1,6 @@
-import React from 'react'
+import SaveWidget from './SaveWidget'
 
-const Navbar = () => {
+const NavBar = () => {
 
   function openMenu() {
     let menu = document.getElementById('menu')
@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='navbar py-5 relative'>
+      <nav id='navbar' className='py-5 relative'>
         <div className='container mx-auto flex items-center px-8 xl:px-0 font-bold'>
           <h1 className='flex flex-grow font-sans text-2xl'><a href="">GymBros</a></h1>
           <div className='flex lg:hidden'>
@@ -31,9 +31,7 @@ const Navbar = () => {
                 <a href="">Guardados</a>
               </li>
             </ul>
-            <button className='lg:flex hidden'>
-              <a href=""><i className='bi bi-bookmark' style={{fontSize: 20}}></i></a>
-            </button>
+            <SaveWidget/>
           </div>
         </div>
       </nav>
@@ -41,4 +39,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default NavBar
