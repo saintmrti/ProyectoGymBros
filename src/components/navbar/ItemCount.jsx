@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const ItemCount = ({stock, inicial}) => {
 
-  const [clickCount, setClickCount] = useState(0)
+  const [clickCount, setClickCount] = useState(parseInt(inicial))
 
   const aumentar = () => {
     if (stock > 0) {
