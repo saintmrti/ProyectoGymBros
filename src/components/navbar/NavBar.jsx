@@ -1,7 +1,7 @@
 import SaveWidget from './SaveWidget'
 
 const NavBar = () => {
-
+  
   function openMenu() {
     let menu = document.getElementById('menu')
 
