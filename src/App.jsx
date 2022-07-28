@@ -1,4 +1,5 @@
-import ItemInfoContainer from './components/navbar/ItemInfoContainer'
+
+import ItemInfoContainer from './components/itemcontainer/ItemInfoContainer'
 import NavBar from './components/navbar/NavBar'
 
 
