@@ -1,7 +1,6 @@
 import ItemCount from "./ItemCount"
 
-const ItemInfoContainer = () => {
-
+const ItemListContainer = () => {
 
   return (
     <>
@@ -19,4 +18,4 @@ const ItemInfoContainer = () => {
   )
 }
 
-export default ItemInfoContainer
+export default ItemListContainer
