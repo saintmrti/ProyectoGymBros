@@ -1,19 +1,29 @@
-import ItemCount from "./ItemCount"
-
+import { useEffect, useState } from "react"
+import ItemList from "./ItemList"
 const ItemListContainer = () => {
+  const [items, setItems] = useState([])
+  useEffect(()=>{
+    let itemsArray =[
+      {id:1, nombre:"Creatina", marca:"RC", precio: 250},
+      {id:2, nombre:"Proteina", marca:"Whey", precio: 1500},
+      {id:3, nombre:"Insane Psychotic", marca:"Watermelon", precio: 400}
+    ]
+    const promesaItems = new Promise((res, rej) => {
+      setTimeout(() => {
+        res(itemsArray)
+      }, 2000)
+    })
+
+    promesaItems.then((res) => {
+      setItems(res)
+    }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
+  },[])
 
   return (
     <>
-        <div id="cardInfo" className="my-10 mx-20 grid justify-items-stretch border border-black py-5 px-3 rounded-md">
-            <h1 className="text-xl">Creatina</h1>
-            <p className="py-5">
-                ¿Cuál es el mejor suplemento y por que es la creatina? La creatina es una sustancia química que se encuentra naturalmente en el cuerpo. También se encuentra en carnes rojas y mariscos. A menudo se utiliza para mejorar el rendimiento del ejercicio y la masa muscular. La creatina participa en la producción de energía para los músculos...
-            </p>
-            <button className="text-white bg-yellow-400 justify-self-center py-1 px-3 rounded-md font-bold hover:bg-yellow-500">Saber más</button>
-        </div>
-        <div className="mx-20">
-          <ItemCount stock="5" inicial="1"/>
-        </div>
+      <div className="container-fluid">
+        <ItemList items={items}/>
+      </div>
     </>
   )
 }
