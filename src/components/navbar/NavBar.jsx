@@ -10,18 +10,18 @@ const NavBar = () => {
 
   return (
     <>
-      <nav id='navbar' className='py-5 relative'>
+      <nav className='py-5 relative'>
         <div className='container mx-auto flex items-center px-8 xl:px-0 font-bold'>
-          <h1 className='flex flex-grow font-sans text-2xl'><a href="">GymBros</a></h1>
+          <h1 className='flex flex-grow text-2xl'><a href="">GymBros</a></h1>
           <div className='flex lg:hidden'>
-            <button onClick={openMenu}><i className='bi bi-list' style={{fontSize: 25}}></i></button>
+            <button onClick={openMenu}><i id='iconNav' className='bi bi-list'></i></button>
           </div>
           <div id='menu' className='lg:flex hidden flex-grow justify-between items-center absolute lg:relative lg:top-0 top-20 w-full lg:w-auto left-0 p-7 lg:p-0'>
             <ul className='flex flex-col lg:flex-row'>
-              <li className='mr-7 mb-5 lg:mb-0'>
+              <li className='mr-3 mb-5 lg:mb-0'>
                 <a href="">Rutinas</a>
               </li>
-              <li className='mr-7 mb-5 lg:mb-0'>
+              <li className='mr-3 mb-5 lg:mb-0'>
                 <a href="">Recetas</a>
               </li>
               <li className='mb-5 lg:mb-0'>
