@@ -36,3 +36,42 @@ a.active, nav ul a:hover {
 .cardInfo {
     width: 400px;
 }
+
+@media (max-width: 1024px) {
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        background-color: white;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav li {
+        display: block;
+        line-height: 30px;
+    }
+
+    nav ul a {
+        font-size: 20px;
+    }
+
+    a.active, nav ul a:hover {
+        border: none;
+        color: #FCB823;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 375px) {
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+   
+}
