@@ -24,7 +24,8 @@ const ItemDetailContainer = () => {
 
     promesaDetails.then((res) => {
         setDetails(res)
-    })
+    }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
+    
   }, [idProducto])
   return (
     <>
