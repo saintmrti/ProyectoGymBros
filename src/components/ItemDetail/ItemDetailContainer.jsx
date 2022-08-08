@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import Spinner from '../Spinner';
 
 const ItemDetailContainer = () => {
   const {idProducto} = useParams()
   const [details, setDetails] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let detailsArray =[
@@ -23,13 +25,14 @@ const ItemDetailContainer = () => {
     })
 
     promesaDetails.then((res) => {
+      setLoading(false)
         setDetails(res)
     }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
     
   }, [idProducto])
   return (
     <>
-        <ItemDetail nombre={details.nombre} marca={details.marca} precio={details.precio} descripcion={details.descripcion}/>
+        {loading ? <Spinner/> : <ItemDetail nombre={details.nombre} marca={details.marca} precio={details.precio} descripcion={details.descripcion}/>}
     </>
   )
 }
