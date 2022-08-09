@@ -25,6 +25,10 @@ const ItemListContainer = () => {
       setLoading(false)
       setItems(res)
     }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
+
+    return () => {
+      setLoading(true)
+    }
     
   },[idCategoria])
 
