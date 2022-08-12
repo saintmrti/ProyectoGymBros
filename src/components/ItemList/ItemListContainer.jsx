@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import Spinner from "../Spinner"
 import ItemList from "./ItemList"
 const ItemListContainer = () => {
-  const [items, setItems] = useState([])
+  const [items, ss] = useState([])
   const [loading, setLoading] = useState(true)
   const {idCategoria} = useParams()
   useEffect(()=>{

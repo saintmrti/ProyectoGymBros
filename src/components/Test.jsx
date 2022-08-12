@@ -1,6 +1,15 @@
+import { useEffect } from "react"
+
 const Test = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      
+    }, 2000);
+  }, [])
+
   function handleOnClick() {
-    
+    console.log("first")
   }
 
   function handleOnKeyDown(e) {
