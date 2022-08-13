@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
 import Spinner from '../Spinner';
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 
     promesaDetails.then((res) => {
       setLoading(false)
-        setDetails(res)
+      setDetails(res)
     }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
     
   }, [idProducto])
