@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
   }, [idProducto])
   return (
     <>
-        {loading ? <Spinner/> : <ItemDetail nombre={details.nombre} marca={details.marca} precio={details.precio} stock= {details.stock} descripcion={details.descripcion}/>}
+        {loading ? <Spinner/> : <ItemDetail details={details}/>}
     </>
   )
 }
