@@ -29,7 +29,7 @@ const NavBar = () => {
                 <Link to={"/holamundo"}>Nosotros</Link>
               </li>
               <li className='visible lg:invisible'>
-                <Link to={"/welcome"}>Guardados</Link>
+                <Link to={"/cart"}>Guardados</Link>
               </li>
             </ul>
             <SaveWidget/>

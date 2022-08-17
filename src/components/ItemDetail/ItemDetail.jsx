@@ -1,19 +1,15 @@
 import { useContext, useState } from "react";
 import ItemCount from "../ItemList/ItemCount";
 import {Link} from 'react-router-dom';
-import { myContext } from "../CartContext";
+import { myContext } from "../Cart/CartContext";
 const ItemDetail = ({details}) => {
   const [count, setCount] = useState(1)
   const [itemCount, setItemCount] = useState(true)
   const {save, isSave, addItem} = useContext(myContext)
 
   const onAdd = () => {
-    !isSave(details.id) && setItemCount(false)
     addItem(details, count)
-  }
-
-  const addList = () => {
-    console.log('Este es tu array', save)
+    setItemCount(false)
   }
 
   return (
@@ -22,7 +18,7 @@ const ItemDetail = ({details}) => {
         <p className="py-2">Marca: {details.marca}</p>
         <p className="py-2">Precio: ${details.precio}</p>
         <p className="py-2">Descripcion: <br /> {details.descripcion}</p>
-        {itemCount ? <ItemCount stock={details.stock} onAdd={onAdd} count={count} setCount={setCount}/> : <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-5 hover:bg-yellow-500" onClick={addList} ><Link to={"/carrito"}>Terminar Compra</Link></button>}
+        {itemCount ? <ItemCount stock={details.stock} onAdd={onAdd} count={count} setCount={setCount}/> : <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-5 hover:bg-yellow-500"><Link to={"/cart"}>Ir a carrito</Link></button>}
     </div>
   )
 }
