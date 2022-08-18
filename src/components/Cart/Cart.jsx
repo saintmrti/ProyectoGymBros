@@ -11,8 +11,9 @@ const Cart = () => {
   const {save} = useContext(myContext)
   
   useEffect(()=>{
-    save.length > 0 && setShowBtn(true) 
+    save.length > 0 && setShowBtn(true)
   }, [])
+
   
   return (
     <>
