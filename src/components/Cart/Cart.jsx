@@ -15,10 +15,10 @@ const Cart = () => {
   
   return (
     <>
-        <div className="flex flex-grow justify-center">
+        <div className="grid gap-4 my-10 justify-center">
             {showBtn ? <div>
-              <p className="text-xl mt-10">Lo sentimos ): <br /> No tienes nada en tu carrito</p>
-              <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-3 hover:bg-yellow-500"><Link to={"/"}>Ir a comprar</Link></button>
+              <p className="text-xl">Ups! Aún no tienes nada guardado</p>
+              <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-3 hover:bg-yellow-500"><Link to={"/"}>Volver a inicio</Link></button>
             </div> : <SaveList elements={save}/>}
         </div>
     </>

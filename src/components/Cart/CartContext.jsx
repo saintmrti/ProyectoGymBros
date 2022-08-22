@@ -3,9 +3,9 @@ export const myContext = createContext()
 const CartContext = ({children}) => {
   const [save, setSave] = useState([])
 
-  const addItem = (item, newQuantity) => {
+  const addItem = (item) => {
     const saveList = save.filter(element => element.id !== item.id)
-    saveList.push({...item, cantidad: newQuantity})
+    saveList.push(item)
     setSave(saveList)
   }
   const isSave = (id) => save.find(element => element.id === id) ? true : false;

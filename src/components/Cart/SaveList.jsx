@@ -5,7 +5,7 @@ function SaveList({elements}) {
   return (
     <>
       {elements.map((element)=>
-        <SaveItem key={element.id} id={element.id} nombre={element.nombre} marca={element.marca} precio={element.precio} cantidad={element.cantidad}/>
+        <SaveItem key={element.id} id={element.id} titulo={element.titulo} descripcion={element.descripcion}/>
       )}
     </>
   )
