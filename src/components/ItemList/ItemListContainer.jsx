@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import Spinner from "../Spinner"
 import ItemList from "./ItemList"
 const ItemListContainer = () => {
@@ -7,24 +8,19 @@ const ItemListContainer = () => {
   const [loading, setLoading] = useState(true)
   const {idCategoria} = useParams()
   useEffect(()=>{
-    let itemsArray =[
-      {id:1, nombre:"Creatina", marca:"RC", precio: 250, idCategoria: "creatinas"},
-      {id:2, nombre:"Proteina", marca:"Whey", precio: 1500, idCategoria: "proteinas"}
-    ]
+    
+    const db = getFirestore()
+    const refCollectionItems = collection(db, 'items')
 
-    const promesaItems = new Promise((res, rej) => {
-      setTimeout(() => {
-        if(!idCategoria){
-          res(itemsArray)
-        } else{
-          res(itemsArray.filter(item => item.idCategoria === idCategoria))
-        }
-      }, 2000)
-    })
-    promesaItems.then((res) => {
+    getDocs(refCollectionItems).then((res) => {
       setLoading(false)
-      setItems(res)
-    }).catch(error=>console.log("Hubo un problema con la promesa: " + error))
+      const arrayItems = res.docs.map((item) => ({id: item.id, ...item.data()}))
+      if(!idCategoria){
+        setItems(arrayItems)
+      } else{
+        setItems(arrayItems.filter(item => item.categoria === idCategoria))
+      }
+    })
 
     return () => {
       setLoading(true)
@@ -34,7 +30,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div>
+      <div className="grid gap-4 my-10 justify-center">
         {loading ? <Spinner/> : <ItemList items={items}/>}
       </div>
     </>

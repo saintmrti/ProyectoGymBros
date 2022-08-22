@@ -14,11 +14,9 @@ const ItemDetail = ({details}) => {
 
   return (
     <div className="my-10 mx-20 border border-black py-5 px-3 rounded-md">
-        <h1 className="text-lg py-2">{details.nombre}</h1>
-        <p className="py-2">Marca: {details.marca}</p>
-        <p className="py-2">Precio: ${details.precio}</p>
-        <p className="py-2">Descripcion: <br /> {details.descripcion}</p>
-        {itemCount ? <ItemCount stock={details.stock} onAdd={onAdd} count={count} setCount={setCount}/> : <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-5 hover:bg-yellow-500"><Link to={"/cart"}>Ir a carrito</Link></button>}
+        <h1 className="text-lg py-2">{details.titulo}</h1>
+        <p className="py-2">{details.descripcion}</p>
+        {itemCount ? <ItemCount onAdd={onAdd} count={count} setCount={setCount}/> : <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-5 hover:bg-yellow-500"><Link to={"/cart"}>Ir a carrito</Link></button>}
     </div>
   )
 }

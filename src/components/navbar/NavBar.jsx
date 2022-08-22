@@ -20,10 +20,13 @@ const NavBar = () => {
           <div className='lg:flex flex-grow justify-between items-center absolute lg:relative lg:top-0 top-20 w-full lg:w-auto left-0 p-7 lg:p-0'>
             <ul id='menu' className='flex flex-col lg:flex-row'>
               <li className='mr-3 mb-10 mt-10 lg:mb-0 lg:mt-0'>
-                <Link to={"/categoria/creatinas"}>Creatinas</Link>
+                <Link to={"/categoria/rutinas"}>Rutinas</Link>
               </li>
               <li className='mr-3 mb-10 lg:mb-0'>
-                <Link to={"/categoria/proteinas"}>Proteinas</Link>
+                <Link to={"/categoria/tips"}>Tips</Link>
+              </li>
+              <li className='mr-3 mb-10 lg:mb-0'>
+                <Link to={"/categoria/nutricion"}>Nutrición</Link>
               </li>
               <li className='mb-10 lg:mb-0'>
                 <Link to={"/holamundo"}>Nosotros</Link>
