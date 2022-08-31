@@ -37,6 +37,10 @@ a.active, nav ul a:hover {
     width: 600px;
 }
 
+.imgPrincipal {
+    width: 25%;
+}
+
 /* LOADER CSS-Start */
 .loader {
     width: 48px;
@@ -103,12 +107,20 @@ a.active, nav ul a:hover {
     nav ul.show {
         left: 0;
     }
+
+    .cardInfo {
+        width: 100%;
+    }
+    
+    .imgPrincipal {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 767px) and (min-width: 375px) {
-
+    
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-   
+    
 }

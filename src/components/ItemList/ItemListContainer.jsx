@@ -30,7 +30,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <div className="grid gap-4 my-10 justify-center">
+      <div className="grid gap-4 lg:my-10 justify-center">
         {loading ? <Spinner/> : <ItemList items={items}/>}
       </div>
     </>

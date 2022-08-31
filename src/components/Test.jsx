@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { useState } from "react";
-import { useEffect } from "react"
 import { myContext } from "./Cart/CartContext";
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 

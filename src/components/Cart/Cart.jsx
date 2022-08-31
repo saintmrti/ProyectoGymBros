@@ -16,7 +16,7 @@ const Cart = () => {
   return (
     <>
         <div className="grid gap-4 my-10 justify-center">
-            {showBtn ? <div>
+            {showBtn ? <div className='text-center'>
               <p className="text-xl">Ups! Aún no tienes nada guardado</p>
               <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-3 hover:bg-yellow-500"><Link to={"/"}>Volver a inicio</Link></button>
             </div> : <SaveList elements={save}/>}
