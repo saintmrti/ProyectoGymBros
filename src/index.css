@@ -29,6 +29,11 @@ a.active, nav ul a:hover {
     transition: .5s;
 }
 
+
+#logo {
+    width: 50%;
+}
+
 #iconNav {
     font-size: 30px;
 }

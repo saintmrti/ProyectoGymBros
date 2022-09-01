@@ -17,8 +17,8 @@ const Cart = () => {
     <>
         <div className="grid gap-4 my-10 justify-center">
             {showBtn ? <div className='text-center'>
-              <p className="text-xl">Ups! Aún no tienes nada guardado</p>
-              <button className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-3 hover:bg-yellow-500"><Link to={"/"}>Volver a inicio</Link></button>
+              <p className="text-xl mb-3">Ups! Aún no tienes nada guardado</p>
+              <button><Link className="bg-yellow-400 py-2 px-3 rounded-md text-white font-bold mt-3 hover:bg-yellow-500" to={"/"}>Volver a inicio</Link></button>
             </div> : <SaveList elements={save}/>}
         </div>
     </>
