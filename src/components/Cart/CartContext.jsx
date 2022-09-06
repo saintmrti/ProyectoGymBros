@@ -9,11 +9,21 @@ const CartContext = ({children}) => {
     !save.some(element => element.id == item.id) && setCount(count + 1)
     saveList.push(item)
     setSave(saveList)
+    localStorage.setItem('count', JSON.stringify(count + 1))
+    localStorage.setItem('bookmark', JSON.stringify(saveList))
   }
   const isSave = (id) => save.find(element => element.id === id) ? true : false;
   const removeItem = (id) => {
-    setSave(save.filter(element => element.id !== id))
-    count > 0 ? setCount(count - 1) : setCount(0)
+    const saveList = save.filter(element => element.id !== id)
+    setSave(saveList)
+    if (count > 0) {
+      setCount(count - 1)
+      localStorage.setItem('count', JSON.stringify(count - 1))
+    } else{
+      setCount(0)
+      localStorage.setItem('count', JSON.stringify(0))
+    }
+    localStorage.setItem('bookmark', JSON.stringify(saveList))
   };
   const clear = () => setSave([]);
 

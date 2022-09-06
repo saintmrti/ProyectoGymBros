@@ -1,10 +1,14 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { myContext } from '../Cart/CartContext'
 
 const SaveWidget = () => {
   
-  const {count} = useContext(myContext)
+  const {count, setCount} = useContext(myContext)
+
+  useEffect(()=> {
+    localStorage.getItem('count') && setCount(parseInt(localStorage.getItem('count')))
+  }, [])
 
   return (
     <>

@@ -7,11 +7,16 @@ import { myContext } from './CartContext';
 
 const Cart = () => {
   const [showBtn, setShowBtn] = useState(false)
-  const {save} = useContext(myContext)
+  const {save, setSave} = useContext(myContext)
   
   useEffect(()=>{
     save.length > 0 ? setShowBtn(false) : setShowBtn(true)
   }, [save])
+
+  useEffect(()=>{
+    localStorage.getItem('bookmark') && setSave(JSON.parse(localStorage.getItem('bookmark')))
+    save.length > 0 ? setShowBtn(false) : setShowBtn(true)
+  }, [])
   
   return (
     <>
