@@ -30,7 +30,7 @@ const NavBar = () => {
                 <NavLink to={"/categoria/nutricion"} activeclassname='active'>Nutrición</NavLink>
               </li>
               <li className='mb-10 lg:mb-0'>
-                <NavLink to={"/holamundo"} activeclassname='active'>Nosotros</NavLink>
+                <NavLink to={"/nosotros"} activeclassname='active'>Nosotros</NavLink>
               </li>
               <li className='visible lg:invisible'>
                 <NavLink to={"/cart"} activeclassname='active'>Guardados</NavLink>
