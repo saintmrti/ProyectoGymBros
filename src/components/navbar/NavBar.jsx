@@ -21,19 +21,19 @@ const NavBar = () => {
           <div className='lg:flex flex-grow justify-between items-center absolute lg:relative lg:top-0 top-20 w-full lg:w-auto left-0 p-7 lg:p-0'>
             <ul id='menu' className='flex flex-col lg:flex-row'>
               <li className='mr-3 mb-10 mt-10 lg:mb-0 lg:mt-0'>
-                <NavLink to={"/categoria/rutinas"} activeclassname='active'>Rutinas</NavLink>
+                <NavLink to={"/categoria/rutinas"} activeclassname='active' onClick={openMenu}>Rutinas</NavLink>
               </li>
               <li className='mr-3 mb-10 lg:mb-0'>
-                <NavLink to={"/categoria/tips"} activeclassname='active'>Tips</NavLink>
+                <NavLink to={"/categoria/tips"} activeclassname='active' onClick={openMenu}>Tips</NavLink>
               </li>
               <li className='mr-3 mb-10 lg:mb-0'>
-                <NavLink to={"/categoria/nutricion"} activeclassname='active'>Nutrición</NavLink>
+                <NavLink to={"/categoria/nutricion"} activeclassname='active' onClick={openMenu}>Nutrición</NavLink>
               </li>
               <li className='mb-10 lg:mb-0'>
-                <NavLink to={"/nosotros"} activeclassname='active'>Nosotros</NavLink>
+                <NavLink to={"/nosotros"} activeclassname='active' onClick={openMenu}>Nosotros</NavLink>
               </li>
               <li className='visible lg:invisible'>
-                <NavLink to={"/cart"} activeclassname='active'>Guardados</NavLink>
+                <NavLink to={"/cart"} activeclassname='active' onClick={openMenu}>Guardados</NavLink>
               </li>
             </ul>
             <SaveWidget/>
