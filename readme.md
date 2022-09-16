@@ -1,3 +1,7 @@
+<h1>Proyecto GymBros</h1>
+
+<h2>Proyecto realizado con React Js para crear una aplicación del Fitness</h2>
+
 FECHA DE INICIO: 04/08/2022
 
 ESTE ES UN PROYECTO QUE SE ENCUENTRA EN PILOTO !!
@@ -19,3 +23,6 @@ Utilizamos la base de datos Firebase para guardar objetos. https://firebase.goog
 El proyecto esta subido en Firebase https://proyectogymbase.web.app/
 
 ATTE: SAINT
+
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/></a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/></a>
+
