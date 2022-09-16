@@ -1,6 +1,6 @@
 <h1>Proyecto GymBros</h1>
 
-<h2>Proyecto realizado con React Js para crear una aplicación del Fitness</h2>
+<h3>Proyecto realizado con React Js para crear una aplicación del Fitness</h3>
 
 FECHA DE INICIO: 04/08/2022
 
